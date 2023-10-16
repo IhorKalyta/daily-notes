@@ -1,0 +1,35 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.add-button {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+}
+
+.filter-search {
+  border: none;
+  width: 400px;
+  margin: 0 auto;
+  height: 30px;
+  border-radius: 72px;
+  outline: none;
+  padding: 4px 12px 4px 12px;
+  background-color: #f3e1e1;
+  bottom: 0;
+  font-size: 16px;
+}
+
+.notes-container {
+  padding: 20px 0;
+}

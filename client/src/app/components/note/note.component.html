@@ -1,0 +1,22 @@
+<div class="container mt-3 col-12 d-flex justify-content-center p-0">
+  <mat-card class="example-card">
+    <a href="#" class="close" (click)="delete(note.id)" matTooltip="Delete note"></a>
+
+    <mat-card-header class="px-0">
+      <mat-card-title>{{ note.title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="px-0">
+      <p>
+        {{ note.description }}
+      </p>
+    </mat-card-content>
+    <div class="divider"></div>
+    <mat-card-actions class="px-0">
+      <span class="date">{{ note.date }}</span>
+      <div>
+        <mat-icon (click)="edit()" matTooltip="Edit note">edit_note</mat-icon>
+        <!-- <mat-icon (click)="delete(note.id)" matTooltip="Delete note">delete</mat-icon> -->
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>

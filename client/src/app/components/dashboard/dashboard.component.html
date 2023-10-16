@@ -1,0 +1,28 @@
+<mat-toolbar>
+  <div class="logo">
+    <img src="../../../assets/logo1.png" alt="Daily Notes Logo">
+  </div>
+  <input #filter type="text" class="filter-search" placeholder="Filter" [(ngModel)]="notesFilter">
+</mat-toolbar>
+
+<mat-progress-bar
+  *ngIf="isLoading$ | async; else notesBlock"
+  mode="query"
+  class="loader"></mat-progress-bar>
+
+<ng-template #notesBlock>
+  <div class="row notes-container" *ngIf="(notes$ | async)?.length; else notification">
+    <div class="col-12 d-flex flex-column">
+      <app-note *ngFor="let item of (notes$ | async)! | noteFilter : notesFilter" [note]="item"></app-note>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #notification>
+  <div>
+    <span>You don't have any notes yet.</span>
+  </div>
+</ng-template>
+<button mat-mini-fab class="add-button" (click)="addNewNote()" matTooltip="Add new note">
+  <mat-icon>add</mat-icon>
+</button>

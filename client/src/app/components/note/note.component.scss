@@ -1,0 +1,54 @@
+.example-card {
+  width: 400px;
+  background-color: #F5F5F5;
+  padding: 0 16px;
+
+  .close {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    width: 15px;
+    height: 15px;
+    opacity: 0.3;
+  }
+
+  .close:hover {
+    opacity: 1;
+  }
+
+  .close:before, .close:after {
+    position: absolute;
+    left: 7px;
+    content: ' ';
+    height: 16px;
+    width: 2px;
+    background-color: #333;
+  }
+  .close:before {
+    transform: rotate(45deg);
+  }
+  .close:after {
+    transform: rotate(-45deg);
+  }
+
+  mat-card-content {
+    padding: 8px 16px;
+  }
+
+  mat-card-actions {
+    border-top: 1px solid #ccc;
+    justify-content: space-between;
+    padding: 0 16px;
+
+    .date {
+      font-size: 14px;
+      color: #0000008a;
+      font-weight: 500;
+      font-family: Roboto;
+    }
+  }
+
+  mat-button {
+    background-color: white;
+  }
+}
